@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Name Card application 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
+1. node version: 14.15.4
+2. npm version 6.14.10
+3. install packages: `npm install`
+4. run application: `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Requirements 
+The application should have the following functionalities:
+* The input (card list) should initially be empty.
+* Before all values (First Name, Last Name, Phone, Address) are entered, clicking
+on "Add Card" button should not do anything.
+* After entering all values, clicking on "Add Card" button should add the input to
+the name card list.
+* After adding the input to the list, automatically clear the input values for the
+next card input.
+* While typing the phone number, validate the format is xxx-xxx-xxxx (x is digit).
+Until the format is correct, highlight the phone input box with red outline.
+* The search bar is used to search the entered card by name (both first and last
+names). Fuzzy search should be applied while typing in the search bar.
+* "Sort By" is a dropdown menu that allows to sort the entered cards by either
+first name, last name, phone, or address. Initially, no value is selected (no
+sorting is applied) and the cards should show up in the order as entered.
 
-### `npm test`
+  
+# Implementation Details
+1. The card list is empty initially.
+2. If any fields missed, the 'Add Card' button is disabled. ( All fields are required)
+3. If any field entered and cleared, 'Required' error message pops up and input box red bordered.
+4. If phone number isn't valid when entering in xxx-xxx-xxxx format, error messages pops and input box red bordered.
+5. After entering the card, card will show up at the end of the list.
+6. Search box key word are applied to firstName and lastName.
+7. "Sort By" is a dropdown to select sorting key. Default filter is based on 'createdAt'.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Improvements 
+1. add typescript 
+2. add validation for form item field: for example: if vakueKey is mssing, error pops and form will not be rendered.
+3. add remove card function.
+4. add edit card function.
+5. More to dos 
